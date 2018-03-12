@@ -1,0 +1,28 @@
+<form action="/<%=@order.id%>" method="POST">
+	<label>Temperature</label>
+		<input type="radio" name="temp" value="Rare"> Rare
+		<input type="radio" name="temp" value="Med-rare"> Med-rare
+		<input type="radio" name="temp" value="Medium"> Medium
+		<input type="radio" name="temp" value="Med-well"> Med-well
+		<input type="radio" name="temp" value="Well-done"> Well-done
+        <br>
+	<label>Size</label>
+		<input type="radio" name="size" value="3oz"> 3oz
+		<input type="radio" name="size" value="4oz"> 4oz
+		<input type="radio" name="size" value="6oz"> 6oz
+        <br>
+	<label>Toppings</label> <br>
+		<input type="checkbox" name="topping[]" value="Lettuce"> Lettuce <br>
+		<input type="checkbox" name="topping[]" value="Onions"> Onions <br>
+		<input type="checkbox" name="topping[]" value="Pickles"> Pickles <br>
+		<input type="checkbox" name="topping[]" value="Relish"> Relish <br>
+		<input type="checkbox" name="topping[]" value="Fried Egg"> Fried Egg <br>
+		<input type="checkbox" name="topping[]" value="Cheese"> Cheese <br>
+		<input type="checkbox" name="topping[]" value="Mayonnaise"> Mayonnaise <br>
+		<input type="checkbox" name="topping[]" value="Bacon"> Bacon <br>
+	<input type="submit" name="Burgerific">
+	<% if(@order.id != "") %>
+ <!--Method override-->
+   		<input type="hidden" name="_method" value="PUT">
+ 	<% end %>
+</form>

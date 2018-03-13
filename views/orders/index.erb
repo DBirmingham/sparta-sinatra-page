@@ -1,0 +1,12 @@
+<h1>Burger maker</h1>
+<p>See below for the previous orders</p>
+<p>Make your own!</p>
+
+<% @orders.each do |order| %>
+<div>
+  <h3><a href="/<%= order.id %>"><%= order.id %></a></h3>
+  <p><%= order.size %></p>
+  <p><%= order.temp %></p>
+  <p><%= order.toppings %></p>
+</div>
+<% end %>
